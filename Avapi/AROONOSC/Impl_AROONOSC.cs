@@ -282,7 +282,7 @@ namespace Avapi.AvapiAROONOSC
 			return ret;
 		}
 
-        static internal IAvapiResponse_AROONOSC_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_AROONOSC_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

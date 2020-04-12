@@ -321,7 +321,7 @@ namespace Avapi.AvapiKAMA
 			return ret;
 		}
 
-        static internal IAvapiResponse_KAMA_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_KAMA_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

@@ -282,7 +282,7 @@ namespace Avapi.AvapiMINUS_DI
 			return ret;
 		}
 
-        static internal IAvapiResponse_MINUS_DI_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_MINUS_DI_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

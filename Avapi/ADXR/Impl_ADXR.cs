@@ -282,7 +282,7 @@ namespace Avapi.AvapiADXR
 			return ret;
 		}
 
-        static internal IAvapiResponse_ADXR_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_ADXR_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

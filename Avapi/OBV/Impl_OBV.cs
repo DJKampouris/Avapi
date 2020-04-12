@@ -270,7 +270,7 @@ namespace Avapi.AvapiOBV
 			return ret;
 		}
 
-        static internal IAvapiResponse_OBV_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_OBV_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

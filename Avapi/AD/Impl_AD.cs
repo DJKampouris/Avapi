@@ -270,7 +270,7 @@ namespace Avapi.AvapiAD
 			return ret;
 		}
 
-        static internal IAvapiResponse_AD_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_AD_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

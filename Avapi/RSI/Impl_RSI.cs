@@ -321,7 +321,7 @@ namespace Avapi.AvapiRSI
 			return ret;
 		}
 
-        static internal IAvapiResponse_RSI_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_RSI_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

@@ -282,7 +282,7 @@ namespace Avapi.AvapiCCI
 			return ret;
 		}
 
-        static internal IAvapiResponse_CCI_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_CCI_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

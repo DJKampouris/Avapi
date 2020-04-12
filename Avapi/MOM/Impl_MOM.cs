@@ -321,7 +321,7 @@ namespace Avapi.AvapiMOM
 			return ret;
 		}
 
-        static internal IAvapiResponse_MOM_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_MOM_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

@@ -309,7 +309,7 @@ namespace Avapi.AvapiHT_DCPERIOD
 			return ret;
 		}
 
-        static internal IAvapiResponse_HT_DCPERIOD_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_HT_DCPERIOD_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

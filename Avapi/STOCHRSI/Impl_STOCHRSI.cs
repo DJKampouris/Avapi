@@ -410,7 +410,7 @@ namespace Avapi.AvapiSTOCHRSI
 			return ret;
 		}
 
-        static internal IAvapiResponse_STOCHRSI_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_STOCHRSI_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

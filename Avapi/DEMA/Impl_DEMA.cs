@@ -321,7 +321,7 @@ namespace Avapi.AvapiDEMA
 			return ret;
 		}
 
-        static internal IAvapiResponse_DEMA_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_DEMA_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

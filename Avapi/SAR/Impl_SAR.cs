@@ -294,7 +294,7 @@ namespace Avapi.AvapiSAR
 			return ret;
 		}
 
-        static internal IAvapiResponse_SAR_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_SAR_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

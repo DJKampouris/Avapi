@@ -294,7 +294,7 @@ namespace Avapi.AvapiADOSC
 			return ret;
 		}
 
-        static internal IAvapiResponse_ADOSC_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_ADOSC_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

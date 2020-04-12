@@ -321,7 +321,7 @@ namespace Avapi.AvapiEMA
 			return ret;
 		}
 
-        static internal IAvapiResponse_EMA_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_EMA_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

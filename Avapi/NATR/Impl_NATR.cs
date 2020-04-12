@@ -282,7 +282,7 @@ namespace Avapi.AvapiNATR
 			return ret;
 		}
 
-        static internal IAvapiResponse_NATR_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_NATR_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

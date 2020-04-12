@@ -270,7 +270,7 @@ namespace Avapi.AvapiBOP
 			return ret;
 		}
 
-        static internal IAvapiResponse_BOP_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_BOP_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

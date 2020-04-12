@@ -321,7 +321,7 @@ namespace Avapi.AvapiROCR
 			return ret;
 		}
 
-        static internal IAvapiResponse_ROCR_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_ROCR_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

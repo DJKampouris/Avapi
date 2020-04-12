@@ -211,7 +211,7 @@ namespace Avapi.AvapiBATCH_STOCK_QUOTES
 			return ret;
 		}
 
-        static internal IAvapiResponse_BATCH_STOCK_QUOTES_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_BATCH_STOCK_QUOTES_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

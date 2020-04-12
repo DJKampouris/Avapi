@@ -270,7 +270,7 @@ namespace Avapi.AvapiTRANGE
 			return ret;
 		}
 
-        static internal IAvapiResponse_TRANGE_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_TRANGE_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

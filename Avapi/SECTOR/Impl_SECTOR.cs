@@ -856,7 +856,7 @@ namespace Avapi.AvapiSECTOR
 			return ret;
 		}
 
-        static internal IAvapiResponse_SECTOR_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_SECTOR_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

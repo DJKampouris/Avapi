@@ -321,7 +321,7 @@ namespace Avapi.AvapiWMA
 			return ret;
 		}
 
-        static internal IAvapiResponse_WMA_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_WMA_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

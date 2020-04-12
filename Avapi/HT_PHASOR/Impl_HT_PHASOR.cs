@@ -315,7 +315,7 @@ namespace Avapi.AvapiHT_PHASOR
 			return ret;
 		}
 
-        static internal IAvapiResponse_HT_PHASOR_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_HT_PHASOR_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

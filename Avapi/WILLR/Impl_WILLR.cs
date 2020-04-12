@@ -282,7 +282,7 @@ namespace Avapi.AvapiWILLR
 			return ret;
 		}
 
-        static internal IAvapiResponse_WILLR_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_WILLR_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

@@ -282,7 +282,7 @@ namespace Avapi.AvapiPLUS_DM
 			return ret;
 		}
 
-        static internal IAvapiResponse_PLUS_DM_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_PLUS_DM_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

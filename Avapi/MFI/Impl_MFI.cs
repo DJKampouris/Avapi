@@ -282,7 +282,7 @@ namespace Avapi.AvapiMFI
 			return ret;
 		}
 
-        static internal IAvapiResponse_MFI_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_MFI_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

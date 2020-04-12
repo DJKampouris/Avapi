@@ -392,7 +392,7 @@ namespace Avapi.AvapiAPO
 			return ret;
 		}
 
-        static internal IAvapiResponse_APO_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_APO_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

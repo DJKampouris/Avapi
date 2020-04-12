@@ -277,7 +277,7 @@ namespace Avapi.AvapiDIGITAL_CURRENCY_DAILY
 			return ret;
 		}
 
-        static internal IAvapiResponse_DIGITAL_CURRENCY_DAILY_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_DIGITAL_CURRENCY_DAILY_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

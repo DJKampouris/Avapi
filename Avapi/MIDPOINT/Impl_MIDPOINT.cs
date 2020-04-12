@@ -321,7 +321,7 @@ namespace Avapi.AvapiMIDPOINT
 			return ret;
 		}
 
-        static internal IAvapiResponse_MIDPOINT_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_MIDPOINT_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

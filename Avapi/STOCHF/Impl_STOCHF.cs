@@ -359,7 +359,7 @@ namespace Avapi.AvapiSTOCHF
 			return ret;
 		}
 
-        static internal IAvapiResponse_STOCHF_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_STOCHF_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

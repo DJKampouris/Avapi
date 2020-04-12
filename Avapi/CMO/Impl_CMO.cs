@@ -321,7 +321,7 @@ namespace Avapi.AvapiCMO
 			return ret;
 		}
 
-        static internal IAvapiResponse_CMO_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_CMO_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

@@ -357,7 +357,7 @@ namespace Avapi.AvapiMACD
 			return ret;
 		}
 
-        static internal IAvapiResponse_MACD_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_MACD_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

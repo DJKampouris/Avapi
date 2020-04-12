@@ -189,7 +189,7 @@ namespace Avapi.AvapiCURRENCY_EXCHANGE_RATE
 			return ret;
 		}
 
-        static internal IAvapiResponse_CURRENCY_EXCHANGE_RATE_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_CURRENCY_EXCHANGE_RATE_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

@@ -288,7 +288,7 @@ namespace Avapi.AvapiTIME_SERIES_DAILY_ADJUSTED
 			return ret;
 		}
 
-        static internal IAvapiResponse_TIME_SERIES_DAILY_ADJUSTED_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_TIME_SERIES_DAILY_ADJUSTED_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

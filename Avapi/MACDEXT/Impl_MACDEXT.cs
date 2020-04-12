@@ -534,7 +534,7 @@ namespace Avapi.AvapiMACDEXT
 			return ret;
 		}
 
-        static internal IAvapiResponse_MACDEXT_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_MACDEXT_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

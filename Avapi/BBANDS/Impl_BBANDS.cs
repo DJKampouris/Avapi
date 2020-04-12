@@ -416,7 +416,7 @@ namespace Avapi.AvapiBBANDS
 			return ret;
 		}
 
-        static internal IAvapiResponse_BBANDS_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_BBANDS_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

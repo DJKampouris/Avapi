@@ -237,7 +237,7 @@ namespace Avapi.AvapiTIME_SERIES_MONTHLY_ADJUSTED
 			return ret;
 		}
 
-        static internal IAvapiResponse_TIME_SERIES_MONTHLY_ADJUSTED_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_TIME_SERIES_MONTHLY_ADJUSTED_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

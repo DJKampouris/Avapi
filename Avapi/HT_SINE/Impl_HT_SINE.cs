@@ -315,7 +315,7 @@ namespace Avapi.AvapiHT_SINE
 			return ret;
 		}
 
-        static internal IAvapiResponse_HT_SINE_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_HT_SINE_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

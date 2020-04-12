@@ -313,7 +313,7 @@ namespace Avapi.AvapiTIME_SERIES_INTRADAY
 			return ret;
 		}
 
-        static internal IAvapiResponse_TIME_SERIES_INTRADAY_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_TIME_SERIES_INTRADAY_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

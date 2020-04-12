@@ -321,7 +321,7 @@ namespace Avapi.AvapiTRIMA
 			return ret;
 		}
 
-        static internal IAvapiResponse_TRIMA_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_TRIMA_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {

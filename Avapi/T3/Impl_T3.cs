@@ -327,7 +327,7 @@ namespace Avapi.AvapiT3
 			return ret;
 		}
 
-        static internal IAvapiResponse_T3_Content ParseInternal(string jsonInput)
+        public static IAvapiResponse_T3_Content ParseInternal(string jsonInput)
         {
             if (string.IsNullOrEmpty(jsonInput))
             {
