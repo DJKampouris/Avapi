@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>netcoreapp1.1;netstandard2.0</TargetFrameworks>
-		<Version>1.4.8.3</Version>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Version>1.4.8.3</Version>
 		<PackageId>Avapi</PackageId>
 		<PackageVersion>1.4.8.3</PackageVersion>
 		<Authors>Simone Giuliani, Antonio Papa</Authors>
