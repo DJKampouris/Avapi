@@ -32,7 +32,7 @@ steps:
   displayName: 'dotnet pack'
   inputs:
     command: pack
-    packagesToPack: '*/Avapi.csproj'
+    packagesToPack: '**/Avapi.csproj'
     versioningScheme: byBuildNumber
 
 - task: DotNetCoreCLI@2
