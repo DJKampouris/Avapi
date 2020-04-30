@@ -29,12 +29,11 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
-  displayName: 'dotnet pack'
   inputs:
-    command: pack
-    packagesToPack: '**/Avapi.csproj'
-    versioningScheme: byBuildNumber
-
+    command: 'pack'
+    packagesToPack: '**/*.csproj'
+    versioningScheme: 'byEnvVar'
+    versionEnvVar: 'BUILD_BUILDNUMBER'
 - task: DotNetCoreCLI@2
   displayName: 'dotnet push'
   inputs:
