@@ -1,4 +1,4 @@
-using System; 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -107,17 +107,17 @@ namespace Avapi.AvapiTIME_SERIES_DAILY
     {
         internal AvapiResponse_TIME_SERIES_DAILY_Content()
         {
-           MetaData = new MetaData_Type_TIME_SERIES_DAILY();
-           TimeSeries = new List<TimeSeries_Type_TIME_SERIES_DAILY>();
+            MetaData = new MetaData_Type_TIME_SERIES_DAILY();
+            TimeSeries = new List<TimeSeries_Type_TIME_SERIES_DAILY>();
         }
 
-       public MetaData_Type_TIME_SERIES_DAILY MetaData
+        public MetaData_Type_TIME_SERIES_DAILY MetaData
         {
             internal set;
             get;
         }
 
-       public IList<TimeSeries_Type_TIME_SERIES_DAILY> TimeSeries
+        public IList<TimeSeries_Type_TIME_SERIES_DAILY> TimeSeries
         {
             internal set;
             get;
@@ -136,139 +136,139 @@ namespace Avapi.AvapiTIME_SERIES_DAILY
         }
     }
 
-	public class Impl_TIME_SERIES_DAILY : Int_TIME_SERIES_DAILY
-	{
-		const string s_function = "TIME_SERIES_DAILY";
+    public class Impl_TIME_SERIES_DAILY : Int_TIME_SERIES_DAILY
+    {
+        const string s_function = "TIME_SERIES_DAILY";
 
-		internal static string ApiKey
-		{
-			get;
-			set;
-		}
+        internal static string ApiKey
+        {
+            get;
+            set;
+        }
 
-		internal static HttpClient RestClient
-		{
-			get;
-			set;
-		}
+        internal static HttpClient RestClient
+        {
+            get;
+            set;
+        }
 
-		internal static string AvapiUrl
-		{
-			get;
-			set;
-		}
+        internal static string AvapiUrl
+        {
+            get;
+            set;
+        }
 
-		private static readonly Lazy<Impl_TIME_SERIES_DAILY> s_Impl_TIME_SERIES_DAILY =
-			new Lazy<Impl_TIME_SERIES_DAILY>(() => new Impl_TIME_SERIES_DAILY());
-		public static Impl_TIME_SERIES_DAILY Instance
-		{
-			get
-			{
-				return s_Impl_TIME_SERIES_DAILY.Value;
-			}
-		}
-		private Impl_TIME_SERIES_DAILY()
-		{
-		}
+        private static readonly Lazy<Impl_TIME_SERIES_DAILY> s_Impl_TIME_SERIES_DAILY =
+            new Lazy<Impl_TIME_SERIES_DAILY>(() => new Impl_TIME_SERIES_DAILY());
+        public static Impl_TIME_SERIES_DAILY Instance
+        {
+            get
+            {
+                return s_Impl_TIME_SERIES_DAILY.Value;
+            }
+        }
+        private Impl_TIME_SERIES_DAILY()
+        {
+        }
 
-		internal static readonly IDictionary s_TIME_SERIES_DAILY_outputsize_translation
-			 = new Dictionary<Const_TIME_SERIES_DAILY.TIME_SERIES_DAILY_outputsize, string>()
-		{
-			{
-				Const_TIME_SERIES_DAILY.TIME_SERIES_DAILY_outputsize.none,
-				null
-			},
-			{
-				Const_TIME_SERIES_DAILY.TIME_SERIES_DAILY_outputsize.compact,
-				"compact"
-			},
-			{
-				Const_TIME_SERIES_DAILY.TIME_SERIES_DAILY_outputsize.full,
-				"full"
-			}
-		};
+        internal static readonly IDictionary s_TIME_SERIES_DAILY_outputsize_translation
+             = new Dictionary<Const_TIME_SERIES_DAILY.TIME_SERIES_DAILY_outputsize, string>()
+        {
+            {
+                Const_TIME_SERIES_DAILY.TIME_SERIES_DAILY_outputsize.none,
+                null
+            },
+            {
+                Const_TIME_SERIES_DAILY.TIME_SERIES_DAILY_outputsize.compact,
+                "compact"
+            },
+            {
+                Const_TIME_SERIES_DAILY.TIME_SERIES_DAILY_outputsize.full,
+                "full"
+            }
+        };
 
-		public IAvapiResponse_TIME_SERIES_DAILY Query(
-			string symbol,
-			Const_TIME_SERIES_DAILY.TIME_SERIES_DAILY_outputsize outputsize = Const_TIME_SERIES_DAILY.TIME_SERIES_DAILY_outputsize.none)
-		{
-			string current_outputsize = s_TIME_SERIES_DAILY_outputsize_translation[outputsize] as string;
+        public IAvapiResponse_TIME_SERIES_DAILY Query(
+            string symbol,
+            Const_TIME_SERIES_DAILY.TIME_SERIES_DAILY_outputsize outputsize = Const_TIME_SERIES_DAILY.TIME_SERIES_DAILY_outputsize.none)
+        {
+            string current_outputsize = s_TIME_SERIES_DAILY_outputsize_translation[outputsize] as string;
 
-			return QueryPrimitive(symbol,current_outputsize);
-		}
+            return QueryPrimitive(symbol, current_outputsize);
+        }
 
-		public async Task<IAvapiResponse_TIME_SERIES_DAILY> QueryAsync(
-			string symbol,
-			Const_TIME_SERIES_DAILY.TIME_SERIES_DAILY_outputsize outputsize = Const_TIME_SERIES_DAILY.TIME_SERIES_DAILY_outputsize.none)
-		{
-			string current_outputsize = s_TIME_SERIES_DAILY_outputsize_translation[outputsize] as string;
+        public async Task<IAvapiResponse_TIME_SERIES_DAILY> QueryAsync(
+            string symbol,
+            Const_TIME_SERIES_DAILY.TIME_SERIES_DAILY_outputsize outputsize = Const_TIME_SERIES_DAILY.TIME_SERIES_DAILY_outputsize.none)
+        {
+            string current_outputsize = s_TIME_SERIES_DAILY_outputsize_translation[outputsize] as string;
 
-			return await QueryPrimitiveAsync(symbol,current_outputsize);
-		}
+            return await QueryPrimitiveAsync(symbol, current_outputsize);
+        }
 
 
-		public IAvapiResponse_TIME_SERIES_DAILY QueryPrimitive(
-			string symbol,
-			string outputsize = null)
-		{
-			// Build Base Uri
-			string queryString = AvapiUrl + "/query";
+        public IAvapiResponse_TIME_SERIES_DAILY QueryPrimitive(
+            string symbol,
+            string outputsize = null)
+        {
+            // Build Base Uri
+            string queryString = AvapiUrl + "/query";
 
-			// Build query parameters
-			IDictionary<string, string> getParameters = new Dictionary<string, string>();
-			getParameters.Add(new KeyValuePair<string, string>("function", s_function));
-			getParameters.Add(new KeyValuePair<string, string>("apikey", ApiKey));
-			getParameters.Add(new KeyValuePair<string, string>("symbol",symbol));
-			getParameters.Add(new KeyValuePair<string, string>("outputsize",outputsize));
-			queryString += UrlUtility.AsQueryString(getParameters);
+            // Build query parameters
+            IDictionary<string, string> getParameters = new Dictionary<string, string>();
+            getParameters.Add(new KeyValuePair<string, string>("function", s_function));
+            getParameters.Add(new KeyValuePair<string, string>("apikey", ApiKey));
+            getParameters.Add(new KeyValuePair<string, string>("symbol", symbol));
+            getParameters.Add(new KeyValuePair<string, string>("outputsize", outputsize));
+            queryString += UrlUtility.AsQueryString(getParameters);
 
-			// Sent the Request and get the raw data from the Response
-			string response = RestClient?.
-				GetAsync(queryString)?.
-				Result?.
-				Content?.
-				ReadAsStringAsync()?.
-				Result; 
+            // Sent the Request and get the raw data from the Response
+            string response = RestClient?.
+                GetAsync(queryString)?.
+                Result?.
+                Content?.
+                ReadAsStringAsync()?.
+                Result;
 
-			IAvapiResponse_TIME_SERIES_DAILY ret = new AvapiResponse_TIME_SERIES_DAILY
-			{
-				RawData = response,
-				Data = ParseInternal(response),
-				LastHttpRequest = queryString
-			};
+            IAvapiResponse_TIME_SERIES_DAILY ret = new AvapiResponse_TIME_SERIES_DAILY
+            {
+                RawData = response,
+                Data = ParseInternal(response),
+                LastHttpRequest = queryString
+            };
 
-			return ret;
-		}
+            return ret;
+        }
 
-		public async Task<IAvapiResponse_TIME_SERIES_DAILY> QueryPrimitiveAsync(
-			string symbol,
-			string outputsize = null)
-		{
-			// Build Base Uri
-			string queryString = AvapiUrl + "/query";
+        public async Task<IAvapiResponse_TIME_SERIES_DAILY> QueryPrimitiveAsync(
+            string symbol,
+            string outputsize = null)
+        {
+            // Build Base Uri
+            string queryString = AvapiUrl + "/query";
 
-			// Build query parameters
-			IDictionary<string, string> getParameters = new Dictionary<string, string>();
-			getParameters.Add(new KeyValuePair<string, string>("function", s_function));
-			getParameters.Add(new KeyValuePair<string, string>("apikey", ApiKey));
-			getParameters.Add(new KeyValuePair<string, string>("symbol",symbol));
-			getParameters.Add(new KeyValuePair<string, string>("outputsize",outputsize));
-			queryString += UrlUtility.AsQueryString(getParameters);
+            // Build query parameters
+            IDictionary<string, string> getParameters = new Dictionary<string, string>();
+            getParameters.Add(new KeyValuePair<string, string>("function", s_function));
+            getParameters.Add(new KeyValuePair<string, string>("apikey", ApiKey));
+            getParameters.Add(new KeyValuePair<string, string>("symbol", symbol));
+            getParameters.Add(new KeyValuePair<string, string>("outputsize", outputsize));
+            queryString += UrlUtility.AsQueryString(getParameters);
 
-			string response;
-			using (var result = await RestClient.GetAsync(queryString))
-			{
-				response = await result.Content.ReadAsStringAsync();
-			}
-			IAvapiResponse_TIME_SERIES_DAILY ret = new AvapiResponse_TIME_SERIES_DAILY
-			{
-				RawData = response,
-				Data = ParseInternal(response),
-				LastHttpRequest = queryString
-			};
+            string response;
+            using (var result = await RestClient.GetAsync(queryString))
+            {
+                response = await result.Content.ReadAsStringAsync();
+            }
+            IAvapiResponse_TIME_SERIES_DAILY ret = new AvapiResponse_TIME_SERIES_DAILY
+            {
+                RawData = response,
+                Data = ParseInternal(response),
+                LastHttpRequest = queryString
+            };
 
-			return ret;
-		}
+            return ret;
+        }
 
         public static IAvapiResponse_TIME_SERIES_DAILY_Content ParseInternal(string jsonInput)
         {
@@ -276,7 +276,7 @@ namespace Avapi.AvapiTIME_SERIES_DAILY
             {
                 return null;
             }
-            if(jsonInput == "{}")
+            if (jsonInput == "{}")
             {
                 return null;
             }
@@ -284,10 +284,16 @@ namespace Avapi.AvapiTIME_SERIES_DAILY
             AvapiResponse_TIME_SERIES_DAILY_Content ret = new AvapiResponse_TIME_SERIES_DAILY_Content();
             JObject jsonInputParsed = JObject.Parse(jsonInput);
             string errorMessage = (string)jsonInputParsed["Error Message"];
+            string note = (string)jsonInputParsed["Note"];
             if (!string.IsNullOrEmpty(errorMessage))
             {
                 ret.Error = true;
                 ret.ErrorMessage = errorMessage;
+            }
+            else if (!string.IsNullOrEmpty(note))
+            {
+                ret.Error = true; 
+                ret.ErrorMessage = note;
             }
             else
             {
@@ -315,5 +321,5 @@ namespace Avapi.AvapiTIME_SERIES_DAILY
             }
             return ret;
         }
-	}
+    }
 }
